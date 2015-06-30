@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        sliderLabel.text = "50"
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var numberField: UITextField!
     
+    @IBOutlet var sliderLabel: UILabel!
+    
     @IBAction func textFieldDoneEditing(sender: UITextField){
         sender.resignFirstResponder()
     }
@@ -31,6 +34,11 @@ class ViewController: UIViewController {
     @IBAction func backgroundTap(sender: UIControl){
         nameField.resignFirstResponder()
         numberField.resignFirstResponder()
+    }
+    
+    @IBAction func sliderChanged(sender: UISlider) {
+        let progress = lroundf(sender.value)
+        sliderLabel.text = "\(progress)"
     }
 }
 

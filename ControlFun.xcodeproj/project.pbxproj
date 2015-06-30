@@ -411,6 +411,7 @@
 				209F64341B431842006BDDF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		209F64351B431842006BDDF0 /* Build configuration list for PBXNativeTarget "ControlFunTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				209F64371B431842006BDDF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
