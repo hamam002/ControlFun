@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet var nameField: UITextField!
+    
+    @IBOutlet var numberField: UITextField!
+    
+    @IBAction func textFieldDoneEditing(sender: UITextField){
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func backgroundTap(sender: UIControl){
+        nameField.resignFirstResponder()
+        numberField.resignFirstResponder()
+    }
 }
 
