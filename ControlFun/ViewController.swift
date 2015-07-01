@@ -27,6 +27,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var sliderLabel: UILabel!
     
+    @IBOutlet var rightSwitch: UISwitch!
+    
+    @IBOutlet var leftSwitch: UISwitch!
+    
     @IBAction func textFieldDoneEditing(sender: UITextField){
         sender.resignFirstResponder()
     }
@@ -39,6 +43,16 @@ class ViewController: UIViewController {
     @IBAction func sliderChanged(sender: UISlider) {
         let progress = lroundf(sender.value)
         sliderLabel.text = "\(progress)"
+    }
+    
+    @IBAction func toggleControl(sender: UISegmentedControl) {
+        
+    }
+    
+    @IBAction func switchChanged(sender: UISwitch) {
+        let setting = sender.on
+        leftSwitch.setOn(setting, animated: true)
+        rightSwitch.setOn(setting, animated: true)
     }
 }
 
