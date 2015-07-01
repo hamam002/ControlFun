@@ -74,27 +74,37 @@
                                     <segment title="Button"/>
                                 </segments>
                                 <connections>
-                                    <action selector="toggleControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="hua-gV-hBy"/>
+                                    <action selector="toggleControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kbf-E8-y9a"/>
                                 </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCP-8A-sxR">
                                 <rect key="frame" x="535" y="374" width="51" height="31"/>
                                 <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WXz-35-Uxc"/>
                                     <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="UeX-wR-rjv"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptj-yc-Mxz">
                                 <rect key="frame" x="16" y="374" width="51" height="31"/>
                                 <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dui-p9-iRN"/>
                                     <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="YnE-UP-4vd"/>
                                 </connections>
                             </switch>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuS-m4-gWK">
+                                <rect key="frame" x="16" y="375" width="568" height="38"/>
+                                <state key="normal" title="Do Something!" backgroundImage="whiteButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="blueButton"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.89393939393939392" green="0.074086283616208434" blue="0.056288755794951212" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7xV-ud-zMF" firstAttribute="leading" secondItem="cZf-dF-qBi" secondAttribute="leading" id="0hu-Nr-EIG"/>
                             <constraint firstItem="Cak-zY-YCO" firstAttribute="trailing" secondItem="bg0-Nl-zOz" secondAttribute="trailing" id="2I5-Cx-N2h"/>
                             <constraint firstItem="cZf-dF-qBi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="127" id="3EX-pI-Ip4"/>
+                            <constraint firstItem="xuS-m4-gWK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="355" id="5hp-9x-igY"/>
                             <constraint firstItem="ptj-yc-Mxz" firstAttribute="leading" secondItem="Y7G-PY-CvF" secondAttribute="leading" id="5ta-36-Uvk"/>
                             <constraint firstItem="YCP-8A-sxR" firstAttribute="trailing" secondItem="6WR-EN-aqi" secondAttribute="trailing" id="8Me-ge-1pz"/>
                             <constraint firstItem="ptj-yc-Mxz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="354" id="9me-Rk-V2G"/>
@@ -111,13 +121,16 @@
                             <constraint firstItem="YCP-8A-sxR" firstAttribute="top" secondItem="ptj-yc-Mxz" secondAttribute="top" id="MjK-De-Oft"/>
                             <constraint firstItem="1FG-VT-z1n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="312" id="O0j-fO-poR"/>
                             <constraint firstItem="Cak-zY-YCO" firstAttribute="leading" secondItem="7xV-ud-zMF" secondAttribute="trailing" constant="8" symbolic="YES" id="PFx-Gv-Wd5"/>
+                            <constraint firstItem="xuS-m4-gWK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QaW-WN-RZr"/>
                             <constraint firstItem="ptj-yc-Mxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QbP-qR-Rzb"/>
                             <constraint firstItem="Cak-zY-YCO" firstAttribute="top" secondItem="bg0-Nl-zOz" secondAttribute="bottom" constant="13" id="R0P-zb-PmM"/>
                             <constraint firstItem="6WR-EN-aqi" firstAttribute="top" secondItem="Cak-zY-YCO" secondAttribute="bottom" constant="35" id="XlG-pO-U8w"/>
+                            <constraint firstItem="xuS-m4-gWK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="355" id="Zcz-NP-uYC"/>
                             <constraint firstItem="bg0-Nl-zOz" firstAttribute="leading" secondItem="cZf-dF-qBi" secondAttribute="trailing" constant="8" symbolic="YES" id="aje-5u-jEr"/>
                             <constraint firstItem="Y7G-PY-CvF" firstAttribute="top" secondItem="7xV-ud-zMF" secondAttribute="bottom" constant="44" id="fAC-dQ-ExW"/>
                             <constraint firstItem="6vQ-0b-Lz2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="kG5-MW-CtK"/>
                             <constraint firstItem="7xV-ud-zMF" firstAttribute="centerY" secondItem="Cak-zY-YCO" secondAttribute="centerY" id="lYz-pk-rC6"/>
+                            <constraint firstItem="xuS-m4-gWK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oLd-O7-maf"/>
                             <constraint firstItem="1FG-VT-z1n" firstAttribute="centerX" secondItem="6vQ-0b-Lz2" secondAttribute="centerX" id="oid-AN-6SQ"/>
                             <constraint firstItem="YCP-8A-sxR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="354" id="viV-ra-qA6"/>
                             <constraint firstItem="6WR-EN-aqi" firstAttribute="leading" secondItem="Y7G-PY-CvF" secondAttribute="trailing" constant="8" symbolic="YES" id="vt7-Sx-jnY"/>
@@ -128,6 +141,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomethingButton" destination="xuS-m4-gWK" id="t6r-f3-Sgk"/>
                         <outlet property="leftSwitch" destination="ptj-yc-Mxz" id="z7t-GI-vgB"/>
                         <outlet property="nameField" destination="bg0-Nl-zOz" id="HUS-uX-YQ8"/>
                         <outlet property="numberField" destination="Cak-zY-YCO" id="Qo1-Oh-imS"/>
@@ -142,5 +156,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>

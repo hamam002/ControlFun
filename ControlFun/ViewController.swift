@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var leftSwitch: UISwitch!
     
+    @IBOutlet var doSomethingButton: UIButton!
+    
     @IBAction func textFieldDoneEditing(sender: UITextField){
         sender.resignFirstResponder()
     }
@@ -46,7 +48,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func toggleControl(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            leftSwitch.hidden = false
+            rightSwitch.hidden = false
+            doSomethingButton.hidden = true
+        }
         
+        else{
+            leftSwitch.hidden = true
+            rightSwitch.hidden = true
+            doSomethingButton.hidden = false
+        }
     }
     
     @IBAction func switchChanged(sender: UISwitch) {
