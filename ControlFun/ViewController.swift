@@ -27,13 +27,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var sliderLabel: UILabel!
     
-    @IBOutlet var rightSwitch: UISwitch!
-    
     @IBOutlet var leftSwitch: UISwitch!
     
-    @IBOutlet var rightSwitchStatus: UILabel!
-    
-    @IBOutlet var leftSwitchStatus: UILabel!
+    @IBOutlet var rightSwitch: UISwitch!
     
     @IBOutlet var doSomethingButton: UIButton!
     
@@ -64,14 +60,6 @@ class ViewController: UIViewController {
             doSomethingButton.hidden = false
         }
     }
-    
-    
-    /*@IBAction func rightSwitchChange(sender: UISwitch) {
-        let setting = sender.on
-        let rightStatus = rightSwitch.on
-        rightSwitchStatus.text = "\(rightStatus)"
-        //rightSwitch.setOn(setting, animated: true)
-    }*/
     
     @IBAction func switchChange(sender: UISwitch) {
         let setting = sender.on
