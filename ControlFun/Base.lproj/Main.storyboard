@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="29" id="YRs-6a-gyQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-EN-aqi">
@@ -80,14 +80,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YCP-8A-sxR">
                                 <rect key="frame" x="535" y="374" width="51" height="31"/>
                                 <connections>
-                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WXz-35-Uxc"/>
+                                    <action selector="rightSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="GWa-Bd-Zji"/>
+                                    <action selector="switchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="afJ-hR-YVk"/>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WeF-Im-Yfr"/>
                                     <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="UeX-wR-rjv"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptj-yc-Mxz">
                                 <rect key="frame" x="16" y="374" width="51" height="31"/>
                                 <connections>
-                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dui-p9-iRN"/>
+                                    <action selector="switchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="kpj-Mm-U35"/>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MAi-yK-x45"/>
                                     <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="YnE-UP-4vd"/>
                                 </connections>
                             </switch>
@@ -97,6 +100,9 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" backgroundImage="blueButton"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekw-3r-ES7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89393939393939392" green="0.074086283616208434" blue="0.056288755794951212" alpha="1" colorSpace="calibratedRGB"/>
@@ -142,10 +148,10 @@
                     </view>
                     <connections>
                         <outlet property="doSomethingButton" destination="xuS-m4-gWK" id="t6r-f3-Sgk"/>
-                        <outlet property="leftSwitch" destination="ptj-yc-Mxz" id="z7t-GI-vgB"/>
+                        <outlet property="leftSwitch" destination="ptj-yc-Mxz" id="3pb-Sl-mZb"/>
                         <outlet property="nameField" destination="bg0-Nl-zOz" id="HUS-uX-YQ8"/>
                         <outlet property="numberField" destination="Cak-zY-YCO" id="Qo1-Oh-imS"/>
-                        <outlet property="rightSwitch" destination="YCP-8A-sxR" id="HLd-4g-Hjb"/>
+                        <outlet property="rightSwitch" destination="YCP-8A-sxR" id="58k-0u-CKs"/>
                         <outlet property="sliderLabel" destination="Y7G-PY-CvF" id="INO-fs-33f"/>
                     </connections>
                 </viewController>

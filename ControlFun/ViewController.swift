@@ -31,6 +31,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var leftSwitch: UISwitch!
     
+    @IBOutlet var rightSwitchStatus: UILabel!
+    
+    @IBOutlet var leftSwitchStatus: UILabel!
+    
     @IBOutlet var doSomethingButton: UIButton!
     
     @IBAction func textFieldDoneEditing(sender: UITextField){
@@ -61,10 +65,44 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func switchChanged(sender: UISwitch) {
+    
+    /*@IBAction func rightSwitchChange(sender: UISwitch) {
+        let setting = sender.on
+        let rightStatus = rightSwitch.on
+        rightSwitchStatus.text = "\(rightStatus)"
+        //rightSwitch.setOn(setting, animated: true)
+    }*/
+    
+    @IBAction func switchChange(sender: UISwitch) {
         let setting = sender.on
         leftSwitch.setOn(setting, animated: true)
         rightSwitch.setOn(setting, animated: true)
+    }
+    
+    @IBAction func buttonPressed(sender: UIButton) {
+        let controller = UIAlertController(title: "Are you sure?", message: nil, preferredStyle: .ActionSheet)
+        
+        let yesAction = UIAlertAction(title: "Yes", style: .Destructive, handler: { action in let msg = self.nameField.text.isEmpty
+            ? "You can breathe easy, everything went ok."
+            : "You can breathe easy, \(self.nameField.text),"
+             + " everything went okay."
+            let controller2 = UIAlertController(title: "Something Was Done", message: msg, preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Phew!", style: .Cancel, handler: nil)
+            controller2.addAction(cancelAction)
+            self.presentViewController(controller2, animated: true, completion: nil)
+        })
+        
+        let noAction = UIAlertAction(title: "No Way!", style: .Cancel, handler: nil)
+        
+        controller.addAction(yesAction)
+        controller.addAction(noAction)
+        
+        if let ppc = controller.popoverPresentationController{
+            ppc.sourceView = sender
+            ppc.sourceRect = sender.bounds
+        }
+        
+        presentViewController(controller, animated: true, completion: nil)
     }
 }
 
